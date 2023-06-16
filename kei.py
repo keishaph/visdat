@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-data = pd.read_csv("https://github.com/keishaph/visdat/blob/main/data-penumpang-bus-transjakarta-januari-desember-2021.csv")
+data = pd.read_csv("data-penumpang-bus-transjakarta-januari-desember-2021.csv")
 data.set_index('bulan', inplace=True)
 data = data.dropna(subset=['jenis'])
 data['jenis'] = data['jenis'].astype(str)
